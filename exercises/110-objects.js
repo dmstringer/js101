@@ -10,7 +10,7 @@
 
 function threeNumbers () {
   const numbers = { numberOne: 1, numberTwo: 2, numberThree: 3 }
-
+  return numbers;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -18,8 +18,8 @@ function threeNumbers () {
 // Return the object of values in the function below.
 
 function manyTypes () {
-  const diverseObject = { name: 'banana', count: 42, isDelicious: true }
-
+  const diverseObject = { name: 'banana', count: 42, delicious: true }
+  return diverseObject;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -39,7 +39,7 @@ function keyAccess () {
   console.assert(bestFruit['isDelicious'] === true)
 
   // return the name of the bestFruit Object here.
-
+  return bestFruit['name'];
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -51,12 +51,13 @@ function addKey () {
   const bestFruit = { name: 'banana', count: 42 }
 
   // Note that before a key is assigned it will always return `undefined`
-  console.assert(bestFruit['isDelicious'] === undefined)
-  bestFruit['isDelicious'] = true
-  console.assert(bestFruit['isDelicious'] === true)
+  console.assert(bestFruit['delicious'] === undefined)
+  bestFruit['delicious'] = true
+  console.assert(bestFruit['delicious'] === true)
 
   // Assign 'yellow' to the key 'color' of bestFruit here and return bestFruit
-
+  bestFruit['color'] = 'yellow';
+  return bestFruit;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -78,7 +79,17 @@ function largeObject () {
   }
 
   // create a bootcampStudent object here similar to bootcampInstructor and return it
-
+  const bootcampStudent = {
+    name: 'Scott',
+    email: 'scott@someemail',
+    age: 48,
+    heightFeet: 5.9,
+    favoriteColor: 'blue',
+    homeTown: 'Houston',
+    pet: 'dog',
+    ownsCar: true
+  }
+  return bootcampStudent;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -102,7 +113,7 @@ function nestedArray () {
   console.assert(bootcampInstructor['favoriteFoods'][0] === 'chicken pot pie')
 
   // Return the second item of the nested array favoriteFoods
-
+  return bootcampInstructor['favoriteFoods'][1];
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -138,5 +149,5 @@ function dotNotation () {
   console.assert(bootcampInstructor.favoriteFoods[0] === 'chicken pot pie')
 
   // Return the name of the bootcampInstructor Object using dot notation
-
+  return bootcampInstructor.name;
 }
